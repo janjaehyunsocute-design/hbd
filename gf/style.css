@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe3ec 100%);
+    font-family: 'Itim', cursive;
+}
+
+/* คอนเทนเนอร์หลัก */
+.card-container {
+    perspective: 1000px;
+    width: 350px;
+    height: 520px;
+}
+
+/* ตัวควบคุมการหมุน */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+
+/* ตั้งค่าหน้าหน้าและหน้าหลัง */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+    box-sizing: border-box;
+}
+
+/* หน้าแรก */
+.card-front {
+    background: white;
+    border: 2px solid #ffcad4;
+}
+
+/* หน้าหลัง */
+.card-back {
+    background: #fff5f5;
+    color: #ee7c91;
+    transform: rotateY(180deg); /* หมุนรอไว้ด้านหลัง */
+    border: 2px solid #ffcad4;
+}
+
+/* ปรับขนาดเค้ก */
+.emoji {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+/* ปรับรูปภาพให้ตรงกลางและเห็นหน้า */
+.photo-frame {
+    width: 180px;
+    height: 180px;
+    margin: 15px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* เลื่อนขึ้นลงปรับตรงนี้ */
+}
+
+/* ปุ่มกด */
+button {
+    background: #ff97aa;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: 'Itim', cursive;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+}

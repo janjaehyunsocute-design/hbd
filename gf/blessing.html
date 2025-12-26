@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Square for GF ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #fffafa;
+            overflow-y: auto;
+            padding: 20px;
+            font-family: 'Itim', cursive;
+        }
+
+        .bento-container {
+            max-width: 800px;
+            margin: 40px auto;
+            display: grid;
+            /* ปรับเป็น 3 คอลัมน์ให้ดูสมดุล */
+            grid-template-columns: repeat(3, 1fr);
+            /* ใช้ aspect-ratio เพื่อบังคับให้เป็นจัตุรัส */
+            gap: 15px;
+        }
+
+        .bento-item {
+            background: white;
+            border-radius: 25px; /* ความมนแบบนุ่มนิ่ม */
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 15px rgba(255, 182, 193, 0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid #fff;
+            /* เคล็ดลับที่ทำให้เป็นสี่เหลี่ยมจัตุรัสเสมอ */
+            aspect-ratio: 1 / 1; 
+        }
+
+        .bento-item:hover {
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 0 12px 25px rgba(255, 182, 193, 0.4);
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* รูปจะถูกตัดให้พอดีจัตุรัสโดยไม่เบี้ยว */
+        }
+
+        /* สำหรับกล่องที่เป็นข้อความ */
+        .bento-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff97aa, #ffc2d1);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h2 { margin: 0; font-size: 1.2rem; }
+        p { margin: 5px 0 0; font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
+            .bento-container {
+                grid-template-columns: repeat(2, 1fr); /* มือถือเหลือ 2 คอลัมน์จัตุรัสคู่กัน */
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <h1 style="color: #ff758f; font-size: 2.2rem;">GAFIW DAY ❤️</h1>
+        <p style="color: #888;">Special for youu.</p>
+    </div>
+
+    <div class="bento-container">
+        <div class="bento-item">
+            <img src="gf1.png" alt="รูป 1">
+        </div>
+
+        <div class="bento-item bento-text">
+            <h2>HBD</h2>
+            <p>ขอให้สิ่งที่มึงคิดไว้สมหวังทุกอย่าเลยนะ</p>
+        </div>
+
+        <div class="bento-item">
+            <img src="gf2.png" alt="รูป 2">
+        </div>
+
+        <div class="bento-item">
+            <img src="gf3.png" alt="รูป 3">
+        </div>
+
+        <div class="bento-item bento-text" style="background: #ffcad4; color: #ff4d6d;">
+            <h2>Bestie</h2>
+            <p>รักมึงน้า ไว้ปีหน้า 2026 ดูคอนด้วยกันเยอะๆเลย
+                ไปเที่ยวด้วยกันหลายๆที่เลย<br>
+            </p>
+        </div>
+
+        <div class="bento-item">
+            <img src="gf4.png" alt="รูป 4">
+        </div>
+        
+        </div>
+
+   
+
+</body>
+</html>
